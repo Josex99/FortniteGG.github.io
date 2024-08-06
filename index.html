@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso de usuarios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        header {
+            background-color: #5cb85c;
+            color: white;
+            padding: 20px;
+            width: 100%;
+            text-align: center;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin-top: 50px;
+            text-align: center;
+        }
+        h5 {
+            color: #555;
+            margin: 10px 0 5px;
+            text-align: left;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="button"] {
+            background-color: #5cb85c;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        input[type="button"]:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h4>Acceso de usuarios</h4>
+    </header>
+    <form action="">
+        <h5>Usuarios</h5>
+        <input type="text" id="usuarios" placeholder="Ingrese su usuario">
+        <h5>Contraseña</h5>
+        <input type="password" id="clave" placeholder="Ingrese su contraseña">
+        <br><br>
+        <input type="button" value="Confirmar" onclick="verificar()">
+    </form>
+    <script>
+        let control = 0;
+        let Contraseña = 'pass';
+
+        function verificar(){
+            let clave = document.getElementById('clave').value;
+            if(clave != Contraseña){
+                alert('La contraseña es incorrecta');
+            } else{
+                window.open("pagina.html");
+            }
+        }
+    </script>
+</body>
+</html>
